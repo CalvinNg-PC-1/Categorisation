@@ -1,8 +1,9 @@
 
 public interface Criteria {
 	
-	//public boolean met(MaintainApplicationVO application) {
+	public static boolean met(MaintainApplicationVO application) {
 		
-	//}
+		return true;
+	}
 	
 }

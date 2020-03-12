@@ -12,8 +12,10 @@ public class FamilyTypeCriteria {
 		this.familyTypeList = familyTypeList;
 	}
 
-	//public boolean met(MaintainApplicationVO application) {
+	public boolean met(MaintainApplicationVO application) {
+	
+		return true;
 		
-	//}
+	}
 	
 }

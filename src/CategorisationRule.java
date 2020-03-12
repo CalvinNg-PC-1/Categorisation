@@ -21,8 +21,9 @@ public class CategorisationRule {
 		this.categoryCode = categoryCode;
 	}
 
-	//public boolean allCriteriasMet(MaintainApplicationVO application) {
+	public boolean allCriteriasMet(MaintainApplicationVO application) {
 		
-	//}
+		return true;
+	}
 	
 }

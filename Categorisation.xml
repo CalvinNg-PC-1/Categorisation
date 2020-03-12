@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="categorisationRuleLibrary"
+    class="CategorisationRuleLibrary">
+	    <property name="ruleListByVersionMap">
+	        <map>
+	            <entry key="CATG_019">
+	                <list>
+	                    <ref bean="categorisationRule_019_GE" />
+	                    <ref bean="categorisationRule_019_G" />
+	                    <ref bean="categorisationRule_019_G1P" />
+	                    <ref bean="categorisationRule_019_WNE" />
+	                    <ref bean="categorisationRule_019_WOE" />
+	                    <ref bean="categorisationRule_019_W" />
+	                    <ref bean="categorisationRule_019_W1P" />
+	                </list>
+	            </entry>
+	            <entry key="CATG_WF19">
+	                <list>
+	                    <ref bean="categorisationRule_WF19_F" />
+	                    <ref bean="categorisationRule_WF19_S" />
+	                </list>
+	            </entry>
+	        </map>
+	    </property>
+	</bean>
+	<!-- Categorisation Criteria Definition -->
+	<bean id="greenFormCriteria" class="FormColourCriteria">
+	    <property name="formColour" value="G" />
+	</bean>
+	<bean id="whiteFormCriteria"
+	    class="FormColourCriteria">
+	    <property name="formColour" value="W" />
+	</bean>
+	<bean id="familyCriteria"
+	    class="FamilyTypeCriteria">
+	    <property name="familyTypeList">
+	        <list>
+	            <value>F</value>
+	            <value>N</value>
+	        </list>
+	    </property>
+	</bean>
+	<!-- Categorisation Rule Definition -->
+	<bean id="categorisationRule_019_GE"
+	    class="CategorisationRule">
+	    <property name="criteriaList">
+	        <list>
+	            <ref bean="greenFormCriteria" />
+	            <ref bean="familyCriteria" />
+	            <ref bean="fepCriteria" />
+	        </list>
+	    </property>
+	    <property name="categoryCode" value="GE" />
+	</bean>
+	
+
+</beans>

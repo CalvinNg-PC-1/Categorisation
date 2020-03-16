@@ -1,4 +1,5 @@
 import java.util.List;
+import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
 
 public class CategorisationRule {
 

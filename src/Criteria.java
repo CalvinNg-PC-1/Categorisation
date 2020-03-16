@@ -1,3 +1,4 @@
+import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
 
 public interface Criteria {
 	

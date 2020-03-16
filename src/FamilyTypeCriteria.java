@@ -1,5 +1,7 @@
 import java.util.List;
 
+import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
+
 public class FamilyTypeCriteria {
 
 	private List<String> familyTypeList;

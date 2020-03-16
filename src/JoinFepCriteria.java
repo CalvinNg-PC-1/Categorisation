@@ -3,9 +3,13 @@ import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplica
 public class JoinFepCriteria {
 	
 	public boolean met(MaintainApplicationVO application) {
-		
-		return true;
-		
+			
+		if (application.getJoinFEP() == "true") {
+			return true;
+		} else {
+			return false;
+		}
+				
 	}
 	
 }

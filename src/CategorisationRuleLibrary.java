@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CategorisationRuleLibrary {
 	
@@ -16,18 +17,11 @@ public class CategorisationRuleLibrary {
 	
 	public List<CategorisationRule> getRuleListByRuleVersion(String ruleVersion) {
 		
-		// Some jobs doing with ruleVersion
-		
-		// this method to be implemented, to get the rule version from database
-        //String ruleVersion = XXXService.getCategorisationRuleVersion(application.getPhaseCode); 
-
-        //List<CategorisationRule> categorisationRuleList = categorisationRuleLibrary.getRuleListByRuleVersion(ruleVersion);
-
-        //for 
-
-        // Do something to update the priorityInfo on the application object
-
-		
+		ruleListByVersionMap.entrySet().stream()
+					        .filter(entry -> entry.getKey().equals(ruleVersion))
+					        .map(entry -> entry.getValue())
+					        .flatMap(List::stream)
+					        .collect(Collectors.toList());
 		
 		return ruleListByRuleVersion;
 	}

@@ -1,3 +1,4 @@
+import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
 
 public class FormColourCriteria {
 
@@ -11,8 +12,14 @@ public class FormColourCriteria {
 		this.formColour = formColour;
 	}
 	
-	//public boolean met(MaintainApplicationVO application) {
+	public boolean met(MaintainApplicationVO application) {
 		
-	//}
+		if (application.getApplicationFormColor() == formColour) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
 	
 }

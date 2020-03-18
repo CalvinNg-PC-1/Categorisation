@@ -2,7 +2,7 @@ import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplica
 
 public class JoinFepCriteria {
 	
-	public boolean met(MaintainApplicationVO application) {
+	public static boolean met(MaintainApplicationVO application) {
 			
 		if (application.getJoinFEP() == "true") {
 			return true;

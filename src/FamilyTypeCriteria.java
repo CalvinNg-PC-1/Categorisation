@@ -3,7 +3,7 @@ import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplica
 
 public class FamilyTypeCriteria {
 
-	private List<String> familyTypeList;
+	private static List<String> familyTypeList;
 	
 	public List<String> getFamilyTypeList() {
 		return familyTypeList;
@@ -13,11 +13,15 @@ public class FamilyTypeCriteria {
 		this.familyTypeList = familyTypeList;
 	}
 
-	public boolean met(MaintainApplicationVO application) {
+	public static boolean met(MaintainApplicationVO application) {
 		
 		boolean flag = false;
 		
-		
+		if (familyTypeList.contains("N") == true || 
+			familyTypeList.contains("F") == true || 
+			familyTypeList.contains("S") == true) {
+			flag = true;
+		}
 		
 		return flag;
 		

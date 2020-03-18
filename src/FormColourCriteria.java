@@ -2,7 +2,7 @@ import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplica
 
 public class FormColourCriteria {
 
-	private String formColour;
+	private static String formColour;
 	
 	public String getFormColour() {
 		return formColour;
@@ -12,7 +12,7 @@ public class FormColourCriteria {
 		this.formColour = formColour;
 	}
 	
-	public boolean met(MaintainApplicationVO application) {
+	public static boolean met(MaintainApplicationVO application) {
 		
 		if (application.getApplicationFormColor() == formColour) {
 			return true;

@@ -26,54 +26,13 @@ public class CategorisationRule {
 		
 		boolean flag = false;
 		
-		switch (application.getApplicationFormColor())
-		{
-			case "G":
-				
-				if(application.getApplicationMemberList().size() > 1) { // Not Singleton
-					if (application.getNuclearWithGrandParentAndChild() == "true") { // Nuclear Family
-						
-					} else if (application.getNuclearWithGrandParentAndChild() == "false") { // Non-nuclear Family
-						
-					} else {
-						
-					}
-				}
-				break;
-			case "W":
-				
-				break;
-			default:
-				break;
+		// All Criteria met
+		if (Criteria.met(application) == true && 
+			FamilyTypeCriteria.met(application) == true && 
+			FormColourCriteria.met(application) == true && 
+			JoinFepCriteria.met(application) == true) {
+			flag = true;
 		}
-		
-		if(application.getApplicationMemberList().size() == 1) {
-			if (application.getSearchMemberRelationshipCode() == "P") {
-				if (application.getNuclearWithGrandParentAndChild() == "true") {
-					flag = true;
-				}
-			} else {
-				if (application.getNuclearWithGrandParentAndChild() != "true") {
-					flag = true;
-				}
-			}
-		} else {
-			if (application.getSearchMemberRelationshipCode() == "W" || 
-				application.getSearchMemberRelationshipCode() == "F" || 
-				application.getSearchMemberRelationshipCode() == "M" || 
-				application.getSearchMemberRelationshipCode() == "S" || 
-				application.getSearchMemberRelationshipCode() == "D") {
-				
-				if (application.getNuclearWithGrandParentAndChild() == "true") {
-					flag = true;
-				}
-			} else {
-				if (application.getNuclearWithGrandParentAndChild() != "true") {
-					flag = true;
-				}
-			}
-		}
-		
 		
 		return flag;
 	}

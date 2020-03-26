@@ -1,6 +1,8 @@
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class CategorisationRuleLibrary {
 	
@@ -15,6 +17,7 @@ public class CategorisationRuleLibrary {
 		this.ruleListByVersionMap = ruleListByVersionMap;
 	}
 	
+	@Test
 	public List<CategorisationRule> getRuleListByRuleVersion(String ruleVersion) {
 		
 		ruleListByVersionMap.entrySet().stream()
@@ -24,6 +27,11 @@ public class CategorisationRuleLibrary {
 					        .collect(Collectors.toList());
 		
 		return ruleListByRuleVersion;
+	}
+	
+	@Test
+	public void test() {
+		fail("Category Rule Library Fail to Convert List!");
 	}
 	
 }

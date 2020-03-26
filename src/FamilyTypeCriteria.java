@@ -1,5 +1,7 @@
 import java.util.List;
 import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class FamilyTypeCriteria {
 
@@ -12,7 +14,8 @@ public class FamilyTypeCriteria {
 	public void setFamilyTypeList(List<String> familyTypeList) {
 		this.familyTypeList = familyTypeList;
 	}
-
+	
+	@Test
 	public static boolean met(MaintainApplicationVO application) {
 		
 		boolean flag = false;
@@ -25,6 +28,11 @@ public class FamilyTypeCriteria {
 		
 		return flag;
 		
+	}
+	
+	@Test
+	public void test() {
+		fail("Family Type Criteria Fail!");
 	}
 	
 }

@@ -1,5 +1,7 @@
 import java.util.List;
 import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class CategorisationRule {
 
@@ -22,6 +24,7 @@ public class CategorisationRule {
 		this.categoryCode = categoryCode;
 	}
 
+	@Test
 	public boolean allCriteriasMet(MaintainApplicationVO application) {
 		
 		boolean flag = false;
@@ -35,6 +38,11 @@ public class CategorisationRule {
 		}
 		
 		return flag;
+	}
+	
+	@Test
+	public void test() {
+		fail("Category Rule Fail!");
 	}
 	
 }

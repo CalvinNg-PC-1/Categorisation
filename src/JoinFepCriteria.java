@@ -1,7 +1,10 @@
 import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class JoinFepCriteria {
 	
+	@Test
 	public static boolean met(MaintainApplicationVO application) {
 			
 		if (application.getJoinFEP() == "true") {
@@ -10,6 +13,11 @@ public class JoinFepCriteria {
 			return false;
 		}
 				
+	}
+	
+	@Test
+	public void test() {
+		fail("Join Fep Criteria Fail!");
 	}
 	
 }

@@ -1,14 +1,16 @@
 import hk.gov.housingauthority.nhs.common.vo.maintainApplication.MaintainApplicationVO;
 import hk.gov.housingauthority.nhs.common.vo.assignApplication.PriorityInfo;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public interface Criteria {
 	
+	@Test
 	public static boolean met(MaintainApplicationVO application) {
 		
 		// Set up criteria for checking here
 		
 		boolean flag = false;
-		
 		
 		// Rule Version: CATG_019
 		if (application.getPhaseCode() == "019") {
@@ -95,6 +97,11 @@ public interface Criteria {
 		}
 		
 		return flag;
+	}
+	
+	@Test
+	public static void test() {
+		fail("Criteria Fail to Run");
 	}
 	
 }

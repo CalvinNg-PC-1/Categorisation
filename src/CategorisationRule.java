@@ -25,7 +25,7 @@ public class CategorisationRule {
 	}
 
 	@Test
-	public boolean allCriteriasMet(MaintainApplicationVO application) {
+	public boolean allCriteriaMet(MaintainApplicationVO application) {
 		
 		boolean flag = false;
 		

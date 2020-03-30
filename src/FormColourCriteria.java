@@ -14,7 +14,6 @@ public class FormColourCriteria {
 		this.formColour = formColour;
 	}
 	
-	@Test
 	public static boolean met(MaintainApplicationVO application) {
 		
 		if (application.getApplicationFormColor() == formColour) {
@@ -23,11 +22,6 @@ public class FormColourCriteria {
 			return false;
 		}
 		
-	}
-	
-	@Test
-	public void test() {
-		fail("Form Colour Criteria Fail!");
 	}
 	
 }

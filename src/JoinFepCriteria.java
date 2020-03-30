@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class JoinFepCriteria {
 	
-	@Test
 	public static boolean met(MaintainApplicationVO application) {
 			
 		if (application.getJoinFEP() == "true") {
@@ -14,10 +13,5 @@ public class JoinFepCriteria {
 		}
 				
 	}
-	
-	@Test
-	public void test() {
-		fail("Join Fep Criteria Fail!");
-	}
-	
+		
 }

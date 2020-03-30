@@ -24,7 +24,6 @@ public class CategorisationRule {
 		this.categoryCode = categoryCode;
 	}
 
-	@Test
 	public boolean allCriteriaMet(MaintainApplicationVO application) {
 		
 		boolean flag = false;
@@ -38,11 +37,6 @@ public class CategorisationRule {
 		}
 		
 		return flag;
-	}
-	
-	@Test
-	public void test() {
-		fail("Category Rule Fail!");
 	}
 	
 }

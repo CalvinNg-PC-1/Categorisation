@@ -17,7 +17,6 @@ public class CategorisationRuleLibrary {
 		this.ruleListByVersionMap = ruleListByVersionMap;
 	}
 	
-	@Test
 	public List<CategorisationRule> getRuleListByRuleVersion(String ruleVersion) {
 		
 		ruleListByVersionMap.entrySet().stream()
@@ -28,10 +27,5 @@ public class CategorisationRuleLibrary {
 		
 		return ruleListByRuleVersion;
 	}
-	
-	@Test
-	public void test() {
-		fail("Category Rule Library Fail to Convert List!");
-	}
-	
+		
 }

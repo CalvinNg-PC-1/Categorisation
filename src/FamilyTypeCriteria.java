@@ -15,7 +15,6 @@ public class FamilyTypeCriteria {
 		this.familyTypeList = familyTypeList;
 	}
 	
-	@Test
 	public static boolean met(MaintainApplicationVO application) {
 		
 		boolean flag = false;
@@ -28,11 +27,6 @@ public class FamilyTypeCriteria {
 		
 		return flag;
 		
-	}
-	
-	@Test
-	public void test() {
-		fail("Family Type Criteria Fail!");
 	}
 	
 }

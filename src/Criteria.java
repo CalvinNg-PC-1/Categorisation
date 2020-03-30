@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public interface Criteria {
 	
-	@Test
 	public static boolean met(MaintainApplicationVO application) {
 		
 		// Set up criteria for checking here
@@ -98,10 +97,5 @@ public interface Criteria {
 		
 		return flag;
 	}
-	
-	@Test
-	public static void test() {
-		fail("Criteria Fail to Run");
-	}
-	
+		
 }
